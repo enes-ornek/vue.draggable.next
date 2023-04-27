@@ -383,7 +383,8 @@ const draggableComponent = defineComponent({
       });
       // if clone
       if (evt.pullMode === "clone") {
-        removeNode(evt.clone);
+        // removeNode(evt.clone);
+        evt.clones.forEach(item => removeNode(item));
         return;
       }
       // remove items and reset transition data
